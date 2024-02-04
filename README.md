@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+Certainly! Below is a README.md template that includes placeholders for various sections, including project description, setup instructions, tech stack, API documentation, and user documentation:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+markdown
+Copy code
+# Livestream Video Overlay App
 
-## Available Scripts
+This Full Stack application allows users to view a livestream video from an RTSP URL with additional features such as custom overlays. Users can create, read, update, and delete custom overlay settings through CRUD operations.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- **Frontend:** React
+- **Backend:** Express (Flask Preferred)
+- **Database:** MongoDB
+- **Video Streaming:** RTSP compatible
+- **Authentication:** Login/Signup with OTP via email
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/livestream-overlay-app.git
+   cd livestream-overlay-app
+Install Dependencies:
 
-### `npm test`
+bash
+Copy code
+cd frontend
+npm install
+cd ../backend
+npm install
+Setup MongoDB:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install MongoDB locally or use a cloud-based MongoDB service.
+Configure the MongoDB connection in the backend.
+Configure Email Service:
 
-### `npm run build`
+Setup an email service for OTP functionality.
+Update email configuration in the backend.
+Run the Application:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy code
+# Run the backend server
+cd backend
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Run the frontend
+cd ../frontend
+npm start
+Access the App:
+Open your browser and navigate to http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+API Documentation
+Authentication
+Signup:
 
-### `npm run eject`
+POST /api/signup
+Request Body: { "email": "user@example.com" }
+Response: { "message": "Signup successful. OTP sent to email." }
+Login:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+POST /api/login
+Request Body: { "email": "user@example.com", "otp": "123456" }
+Response: { "message": "Login successful. Access token generated." }
+Logo API
+Create Logo:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+POST /api/logo
+Request Body: { "url": "http://example.com/logo.png" }
+Response: { "message": "Logo created successfully." }
+Get Logo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+GET /api/logo/:id
+Response: { "url": "http://example.com/logo.png" }
+Delete Logo:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+DELETE /api/logo/:id
+Response: { "message": "Logo deleted successfully." }
+Text API
+Create Text:
 
-## Learn More
+POST /api/text
+Request Body: { "content": "Sample Text" }
+Response: { "message": "Text created successfully." }
+Get Text:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+GET /api/text/:id
+Response: { "content": "Sample Text" }
+Delete Text:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+DELETE /api/text/:id
+Response: { "message": "Text deleted successfully." }
+User Documentation
+Livestream Playback
+Visit the landing page.
+Input the RTSP URL in the provided field.
+Click on the play button to start watching the livestream.
+Use the basic controls for play, pause, and volume adjustment.
+Overlay Management
+Navigate to the overlay settings section.
+Create, read, update, or delete custom overlays as needed.
+Customize overlay settings including position, size, and content.
