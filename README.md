@@ -3,7 +3,7 @@
 
 This Full Stack application allows users to view a livestream video from an RTSP URL with additional features such as custom overlays. Users can create, read, update, and delete custom overlay settings through CRUD operations.
 
-# login signup 
+# upload RTSP URL
 ![Main Page](image/rtsp_inbox.png)
 ## Tech Stack
 
