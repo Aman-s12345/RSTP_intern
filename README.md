@@ -5,6 +5,9 @@ This Full Stack application allows users to view a livestream video from an RTSP
 
 # upload RTSP URL
 ![Main Page](image/rtsp_inbox.png)
+
+# Run RTSP URL
+![Main Page](image/rtsp_rtsp.png)
 ## Tech Stack
 
 - **Frontend:** React
