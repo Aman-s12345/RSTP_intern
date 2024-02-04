@@ -3,6 +3,8 @@
 
 This Full Stack application allows users to view a livestream video from an RTSP URL with additional features such as custom overlays. Users can create, read, update, and delete custom overlay settings through CRUD operations.
 
+# login signup 
+![Main Page](image/rtsp_inbox.png)
 ## Tech Stack
 
 - **Frontend:** React
@@ -19,22 +21,33 @@ This Full Stack application allows users to view a livestream video from an RTSP
   
 Install Dependencies:
 
- ```bash
- cd server
- npm i express
- cd ..
- npm i
- npm run dev
-
+     ```bash
+     cd server
+     npm i express
+     cd ..
+     npm i
+     npm run dev
 Install MongoDB locally or use a cloud-based MongoDB service.
 Use Cloudnary service.
 Configure the MongoDB connection in the backend.
 Configure Email Service:
+# signup page
+ ![Main Page](image/rtsp_signup_page.png)
+# login page
+ ![Main Page](image/rtsp_login_page.png)
+# add text as well as logo
+ ![Main Page](image/rtsp_props.png)
+# upload logo
+ ![Main Page](image/rtsp_upload.png)
+# logout model
+ ![Main Page](image/rtsp_logout.png)
+ 
 
+ 
 Run the Application:
 
-  ```bash
-  npm run dev
+    ```bash
+    npm run dev
 # Run the backend server
 cd server
 npm run dev
@@ -50,34 +63,26 @@ Open your browser and navigate to http://localhost:3000
 Authentication
 Signup:
 
-POST /api/v1/signup
+# POST /api/v1/signup
 
 
 Login:
-POST /api/v1/login
+# POST /api/v1/login
 
 Logo API
 Create Logo:
 
-POST /api/v1/createLogo
+# POST /api/v1/createLogo
 
 Get Logo:
 
-POST /api/v1/getLogo
+# POST /api/v1/getLogo
 
 Delete Logo:
-DELETE /api/v1/deletelogo
+# DELETE /api/v1/deletelogo
 
 Text API
-Create Text:
-
-POST /api/text
-Request Body: { "content": "Sample Text" }
-Response: { "message": "Text created successfully." }
-Get Text:
-
-
-similir
+# same of create Text also
 Click on the play button to start watching the livestream.
 Use the basic controls for play, pause, and volume adjustment.
 Overlay Management
