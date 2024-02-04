@@ -1,7 +1,4 @@
-Certainly! Below is a README.md template that includes placeholders for various sections, including project description, setup instructions, tech stack, API documentation, and user documentation:
 
-markdown
-Copy code
 # Livestream Video Overlay App
 
 This Full Stack application allows users to view a livestream video from an RTSP URL with additional features such as custom overlays. Users can create, read, update, and delete custom overlay settings through CRUD operations.
@@ -12,70 +9,65 @@ This Full Stack application allows users to view a livestream video from an RTSP
 - **Backend:** Express (Flask Preferred)
 - **Database:** MongoDB
 - **Video Streaming:** RTSP compatible
-- **Authentication:** Login/Signup with OTP via email
+- **Authentication:** Login/Signup with OTP via email jwt token
 
 ## Setup Instructions
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/livestream-overlay-app.git
-   cd livestream-overlay-app
+   git clone https://github.com/Aman-s12345/RSTP_intern.git 
+  
 Install Dependencies:
 
-bash
-Copy code
-cd frontend
-npm install
-cd ../backend
-npm install
-Setup MongoDB:
+ ```bash
+ cd server
+ npm i express
+ cd ..
+ npm i
+ npm run dev
 
 Install MongoDB locally or use a cloud-based MongoDB service.
+Use Cloudnary service.
 Configure the MongoDB connection in the backend.
 Configure Email Service:
 
-Setup an email service for OTP functionality.
-Update email configuration in the backend.
 Run the Application:
 
-bash
-Copy code
+  ```bash
+  npm run dev
 # Run the backend server
-cd backend
-npm start
+cd server
+npm run dev
 
 # Run the frontend
-cd ../frontend
-npm start
-Access the App:
+cd ..
+npm run dev
+
+# Access the App:
 Open your browser and navigate to http://localhost:3000
 
-API Documentation
+# API Documentation
 Authentication
 Signup:
 
-POST /api/signup
-Request Body: { "email": "user@example.com" }
-Response: { "message": "Signup successful. OTP sent to email." }
-Login:
+POST /api/v1/signup
 
-POST /api/login
-Request Body: { "email": "user@example.com", "otp": "123456" }
-Response: { "message": "Login successful. Access token generated." }
+
+Login:
+POST /api/v1/login
+
 Logo API
 Create Logo:
 
-POST /api/logo
-Request Body: { "url": "http://example.com/logo.png" }
-Response: { "message": "Logo created successfully." }
+POST /api/v1/createLogo
+
 Get Logo:
 
-GET /api/logo/:id
-Response: { "url": "http://example.com/logo.png" }
-Delete Logo:
+POST /api/v1/getLogo
 
-DELETE /api/logo/:id
-Response: { "message": "Logo deleted successfully." }
+Delete Logo:
+DELETE /api/v1/deletelogo
+
 Text API
 Create Text:
 
@@ -84,16 +76,8 @@ Request Body: { "content": "Sample Text" }
 Response: { "message": "Text created successfully." }
 Get Text:
 
-GET /api/text/:id
-Response: { "content": "Sample Text" }
-Delete Text:
 
-DELETE /api/text/:id
-Response: { "message": "Text deleted successfully." }
-User Documentation
-Livestream Playback
-Visit the landing page.
-Input the RTSP URL in the provided field.
+similir
 Click on the play button to start watching the livestream.
 Use the basic controls for play, pause, and volume adjustment.
 Overlay Management
