@@ -5,7 +5,7 @@ const { MONGODB_URL } = process.env;
 
 exports.connect = () => {
 	mongoose
-		.connect("mongodb://user123:test123@cluster0.bkvvfnl.mongodb.net/Mediaplayer", {
+		.connect("mongodb://amansinghbiuri:amanhaha@cluster0.bkvvfnl.mongodb.net/Mediaplayer", {
 			useNewUrlparser: true,
 			useUnifiedTopology: true,
 		})
